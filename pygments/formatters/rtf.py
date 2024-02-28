@@ -317,7 +317,7 @@ class RtfFormatter(Formatter):
             style = self.style.style_for_token(ttype)
             buf = []
             if style['bgcolor']:
-                buf.append('\\cb%d' % self.color_mapping[style['bgcolor']])
+                buf.append('\\chshdng0\\chcbpat%d' % self.color_mapping[style['bgcolor']])
             if style['color']:
                 buf.append('\\cf%d' % self.color_mapping[style['color']])
             if style['bold']:
